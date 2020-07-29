@@ -1,0 +1,16 @@
+def Kaprekar(num):
+    cuadrado=str(num**2)
+    suma=0
+    if len(cuadrado)%2==0:
+        suma+=int(cuadrado[0:int(len(str(cuadrado))/2)])
+        suma+=int(cuadrado[int(len(cuadrado)/2):int(len(cuadrado))])
+    else:
+        suma+=int(cuadrado[0:int(len(str(cuadrado))/2)])
+        suma+=int(cuadrado[int(len(cuadrado)/2):int(len(cuadrado))])
+                
+    if suma==num:
+        print("{} es de Kaprekar".format(num))
+
+for i in range(10,1000):
+    Kaprekar(i)
+    
